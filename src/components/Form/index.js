@@ -9,10 +9,9 @@ const Form = (props) => {
 	const [endDate, setEndDate] = useState('');
 	const [nameOperatorTransaction, setNameOperatorTransaction] = useState('');
 
-
 	const handleValueSubmit = (event) => {
 		event.preventDefault();
-		props.getOperatorTransaction({startDate, endDate, nameOperatorTransaction})
+		props.getOperatorTransaction({startDate, endDate, nameOperatorTransaction});
 	}
 
 	return (

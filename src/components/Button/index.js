@@ -9,7 +9,8 @@ const Button = (props) => {
 
 	return (
 		<div>
-			<button onClick={() => setModalVisible(true)} className="button">
+			<button onClick={() => setModalVisible(true)} className="button"
+			        type="submit">
 				{children}
 			</button>
 			{isModalVisible ? (
