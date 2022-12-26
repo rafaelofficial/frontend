@@ -15,6 +15,7 @@ const Button = (props) => {
 			{isModalVisible ? (
 				<Modal inputName={inputName} onClose={() => setModalVisible(false)}>
 					<h2>Detalhes Bancários</h2>
+					<hr/>
 				</Modal>
 			) : null}
 		</div>

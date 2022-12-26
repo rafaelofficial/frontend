@@ -10,14 +10,14 @@ const Form = (props) => {
 	const [nameOperatorTransaction, setNameOperatorTransaction] = useState('');
 
 
-	const handleValueChange = (event) => {
+	const handleValueSubmit = (event) => {
 		event.preventDefault();
 		props.getOperatorTransaction({startDate, endDate, nameOperatorTransaction})
 	}
 
 	return (
 		<section className="form">
-			<form onSubmit={handleValueChange}>
+			<form onSubmit={handleValueSubmit}>
 				<h2>Preencha os dados para a pesquisa</h2>
 				<TextField
 					name="startDate"
