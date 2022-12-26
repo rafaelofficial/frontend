@@ -35,7 +35,7 @@ const Modal = (props) => {
 				{data.map((value, index) => {
 					return (
 						<div className="content-data" key={index}>
-							<h3>TRANSAÇÕES:</h3>
+							<h3>TOTAL TRANSAÇÕES: {index + 1}</h3>
 							<p><strong>Operador: </strong>{value.nameOperatorTransaction}</p>
 							<p><strong>Tipo: </strong>{value.type}</p>
 							<p><strong>Valentia: </strong>{value.value
