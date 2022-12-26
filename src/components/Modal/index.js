@@ -16,16 +16,22 @@ const Modal = (props) => {
 		}
 	}
 
-	const fetchData = async () => {
+	const getData = async () => {
 		await api.get(`/transfer-by-name?name=${inputName}`)
 			.then((response) => {
-				setData(response.data);
+				try {
+					if (response.status === 200) {
+						setData(response.data);
+					}
+				} catch (e) {
+					console.error(e);
+				}
 			});
 	};
 
 	useEffect(() => {
-		fetchData().then();
-	});
+		getData().then();
+	}, []);
 
 	return (
 		<div id={id} className="modal" onClick={handleOutSideClick}>
