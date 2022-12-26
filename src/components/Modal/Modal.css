@@ -55,3 +55,7 @@
     padding: 16px;
     text-align: left;
 }
+
+.modal .content-data h3 {
+    text-align: center;
+}
